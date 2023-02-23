@@ -6,62 +6,40 @@ import LogoSvg from '@assets/logoSvg.svg'
 
 export function SignIn(){
     return (
-        <VStack flex={1} bgColor="gray.100">
+      <VStack flex={1} bgColor="gray.100">
+        <VStack bgColor="gray.200" py={16} px={10} borderBottomRadius={24}>
+          <Center mt={24}>
+            <LogoSvg />
+            <Heading fontSize="xl">marketspace</Heading>
+            <Text fontSize="md">Seu espaço de compra e venda</Text>
+          </Center>
 
-        <VStack bgColor="gray.200" py={16} px={10} borderBottomRadius={24} >
-
-            <Center mt={24}>
-                <LogoSvg/>
-                <Heading fontSize="xl">
-                    marketspace
-                </Heading>
-                <Text fontSize="md">
-                    Seu espaço de compra e venda
-                </Text>
-            </Center>
-
-
-            <VStack mt={24} roundedBottom={4} >
-                <Text alignSelf="center" fontSize="md">
-                    Acesse sua conta
-                </Text>
-                <Input
-                    placeholder='E-mail'
-                    fontSize="lg"
-                    p={3}
-                    bgColor="gray.100"
-                    mt={4}
-                />
-                <Input
-                    placeholder='Senha'
-                    fontSize="lg"
-                    p={3}
-                    bgColor="gray.100"
-                    mt={4}
-                />
-                <Button
-                    title='Entrar'
-                    bgColor="blue.400"
-                    rounded="lg"
-                    mt={6}
-                />
-            </VStack>
-            
-        </VStack>
-
-        <VStack py={12} px={10} >
-            <Text
-            alignSelf="center"
-            
-            >
-                Ainda não tem acesso?
+          <VStack mt={24} roundedBottom={4}>
+            <Text alignSelf="center" fontSize="md">
+              Acesse sua conta
             </Text>
-            <Button
-            title='Criar uma conta'
-            bgColor="gray.300"
-            mt={4}
+            <Input
+              placeholder="E-mail"
+              fontSize="lg"
+              bgColor="gray.100"
+              p={3}
+              mt={4}
             />
+            <Input
+              placeholder="Senha"
+              fontSize="lg"
+              bgColor="gray.100"
+              p={3}
+              mt={4}
+            />
+            <Button title="Entrar" bgColor="blue.400" rounded="lg" mt={6} />
+          </VStack>
         </VStack>
+
+        <VStack py={12} px={10}>
+          <Text alignSelf="center">Ainda não tem acesso?</Text>
+          <Button title="Criar uma conta" bgColor="gray.300" mt={4} />
         </VStack>
-    )
+      </VStack>
+    );
 }
